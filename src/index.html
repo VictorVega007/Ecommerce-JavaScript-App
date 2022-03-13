@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Electro Tienda de Electrónica</title>
+
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href="css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
+
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <!-- TOP HEADER -->
+      <div id="top-header">
+        <div class="container">
+          <ul class="header-links pull-left">
+            <li>
+              <a href="#"><i class="fa fa-phone"></i> +569 2234-58-97</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-envelope-o"></i> electro@service.com</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-map-marker"></i> Santiago - Chile</a>
+            </li>
+          </ul>
+          <ul class="header-links pull-right">
+            <li>
+              <a href="#"><i class="fa fa-dollar"></i> CLP</a>
+            </li>
+            <li>
+              <a href="session.html"><i class="fa fa-user-o"></i> Mi cuenta</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- /TOP HEADER -->
+
+      <!-- MAIN HEADER -->
+      <div id="header">
+        <!-- container -->
+        <div class="container">
+          <!-- row -->
+          <div class="row">
+            <!-- LOGO -->
+            <div class="col-md-3">
+              <div class="header-logo">
+                <a href="index.html" class="logo">
+                  <img src="./img/logo.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <!-- /LOGO -->
+
+            <!-- SEARCH BAR -->
+            <div class="col-md-6">
+              <div class="header-search">
+                <form>
+                  <select class="input-select" id="select-categories">
+                    <option value="Todos">Categorías</option>
+                    <option value="Smartphones">Smartphones</option>
+                    <option value="Laptops">Laptops</option>
+                    <option value="Cámaras">Cámaras</option>
+                    <option value="Audio">Audio</option>
+                  </select>
+                  <input
+                    type="search"
+                    class="input search"
+                    id="search"
+                    placeholder="Buscar aquí"
+                  />
+                  <button class="search-btn" class="btn-b">Buscar</button>
+                </form>
+              </div>
+            </div>
+            <!-- /SEARCH BAR -->
+
+            <!-- ACCOUNT -->
+            <div class="col-md-3 clearfix">
+              <div class="header-ctn">
+                <!-- Wishlist -->
+                <div>
+                  <a href="#">
+                    <i class="fa fa-heart-o"></i>
+                    <span>Favoritos</span>
+                    <div class="qty">0</div>
+                  </a>
+                </div>
+                <!-- /Wishlist -->
+
+                <!-- Cart -->
+                <div class="dropdown">
+                  <a
+                    class="dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-expanded="true"
+                  >
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Tu Carrito</span>
+                    <div class="qty" id="cart-counter">0</div>
+                  </a>
+                  <div class="cart-dropdown" id="carrito">
+                    <div class="cart-list" id="cart-container">
+                      <div id="lista-carrito">
+                        <!--Aquí van los productos en el carrito-->
+                      </div>
+                    </div>
+                    <div class="cart-summary">
+                      <small id="products-quantity">0 </small
+                      ><span> Producto(s) seleccionados</span>
+                      <h5>TOTAL: CLP <span id="total-price"> 0</span></h5>
+                    </div>
+                    <div class="cart-btns">
+                      <a href="#" id="vaciar-carrito">Vaciar</a>
+                      <a href="#" id="order"
+                        >Pagar <i class="fa fa-arrow-circle-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Cart -->
+
+                <!-- Menu Toogle -->
+                <div class="menu-toggle">
+                  <a href="index.html">
+                    <i class="fa fa-bars"></i>
+                    <span>Menu</span>
+                  </a>
+                </div>
+                <!-- /Menu Toogle -->
+              </div>
+            </div>
+            <!-- /ACCOUNT -->
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- /MAIN HEADER -->
+    </header>
+    <!-- /HEADER -->
+
+    <!-- NAVIGATION -->
+    <nav id="navigation">
+      <!-- container -->
+      <div class="container">
+        <!-- responsive-nav -->
+        <div id="responsive-nav">
+          <!-- NAV -->
+          <ul class="main-nav nav navbar-nav">
+            <li class="active"><a href="index.html">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+          </ul>
+          <!-- /NAV -->
+        </div>
+        <!-- /responsive-nav -->
+      </div>
+      <!-- /container -->
+    </nav>
+    <!-- /NAVIGATION -->
+
+    <!-- BREADCRUMB -->
+    <div id="breadcrumb" class="section">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="breadcrumb-tree">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Categorías</a></li>
+              <li><a href="#">Audio</a></li>
+              <li class="active">Audífonos (x Resultados)</li>
+            </ul>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /BREADCRUMB -->
+
+    <!-- SECTION -->
+    <div class="section">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row greet-container"></div>
+        <div class="row">
+          <!-- ASIDE -->
+          <div id="aside" class="col-md-3">
+            <!-- aside Widget -->
+            <div class="aside">
+              <h3 class="aside-title">Categorías</h3>
+              <div class="checkbox-filter">
+                <div class="input-checkbox">
+                  <input type="checkbox" id="category-1" />
+                  <label for="category-1">
+                    <span></span>
+                    Laptops
+                    <small>(4)</small>
+                  </label>
+                </div>
+
+                <div class="input-checkbox">
+                  <input type="checkbox" id="category-2" />
+                  <label for="category-2">
+                    <span></span>
+                    Smartphones
+                    <small>(1)</small>
+                  </label>
+                </div>
+
+                <div class="input-checkbox">
+                  <input type="checkbox" id="category-3" />
+                  <label for="category-3">
+                    <span></span>
+                    Cámaras
+                    <small>(1)</small>
+                  </label>
+                </div>
+
+                <div class="input-checkbox">
+                  <input type="checkbox" id="category-4" />
+                  <label for="category-4">
+                    <span></span>
+                    Audio
+                    <small>(2)</small>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!-- /aside Widget -->
+
+            <!-- aside Widget -->
+            <div class="aside">
+              <h3 class="aside-title">Precio</h3>
+              <div class="price-filter">
+                <div id="price-slider"></div>
+                <div class="input-number price-min">
+                  <input id="price-min" type="number" />
+                  <span class="qty-up">+</span>
+                  <span class="qty-down">-</span>
+                </div>
+                <span>-</span>
+                <div class="input-number price-max">
+                  <input id="price-max" type="number" />
+                  <span class="qty-up">+</span>
+                  <span class="qty-down">-</span>
+                </div>
+              </div>
+            </div>
+            <!-- /aside Widget -->
+
+            <!-- aside Widget -->
+            <div class="aside">
+              <h3 class="aside-title">Top de ventas</h3>
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="./img/product01.png" alt="" />
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Laptops</p>
+                  <h3 class="product-name">
+                    <a href="#"
+                      >MACBOOK PRO / M1-8 / GPU 8C / 256GB SSD / 13.3''</a
+                    >
+                  </h3>
+                  <h4 class="product-price">CLP 1.300.000 - 15%</h4>
+                </div>
+              </div>
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="./img/product02.png" alt="" />
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Audio</p>
+                  <h3 class="product-name">
+                    <a href="#">AUDIFONOS DE ESTUDIO AKG K240 MKII</a>
+                  </h3>
+                  <h4 class="product-price">CLP 170.000 - 10%</h4>
+                </div>
+              </div>
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="./img/product03.png" alt="" />
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Laptops</p>
+                  <h3 class="product-name">
+                    <a href="#">Apple Portátil MacBook Pro 14''</a>
+                  </h3>
+                  <h4 class="product-price">CLP 1.800.000</h4>
+                </div>
+              </div>
+            </div>
+            <!-- /aside Widget -->
+          </div>
+          <!-- /ASIDE -->
+
+          <!-- STORE -->
+          <div id="store" class="col-md-9">
+            <!-- store top filter -->
+            <div class="store-filter clearfix">
+              <div class="store-sort">
+                <label>
+                  Ordenar por:
+                  <select class="input-select">
+                    <option value="0">Más vendido</option>
+                    <option value="1">Posición</option>
+                  </select>
+                </label>
+
+                <label>
+                  Mostrar:
+                  <select class="input-select">
+                    <option value="0">20</option>
+                    <option value="1">50</option>
+                  </select>
+                </label>
+              </div>
+              <ul class="store-grid">
+                <li class="active"><i class="fa fa-th"></i></li>
+                <li>
+                  <a href="#"><i class="fa fa-th-list"></i></a>
+                </li>
+              </ul>
+            </div>
+            <!-- /store top filter -->
+
+            <!-- store products -->
+            <div class="row" id="lista-productos">
+              <!-- productos -->
+            </div>
+            <!-- /store products -->
+
+            <!-- store bottom filter -->
+            <div class="store-filter clearfix">
+              <span class="store-qty">Showing 20-100 products</span>
+              <ul class="store-pagination">
+                <li class="active">1</li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li>
+                  <a href="#"><i class="fa fa-angle-right"></i></a>
+                </li>
+              </ul>
+            </div>
+            <!-- /store bottom filter -->
+          </div>
+          <!-- /STORE -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /SECTION -->
+
+    <!-- NEWSLETTER -->
+    <div id="newsletter" class="section">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="newsletter">
+              <p>Suscribir a nuestro <strong>NEWSLETTER</strong></p>
+              <form>
+                <input
+                  class="input"
+                  type="email"
+                  placeholder="Ingresa tu E-mail"
+                />
+                <button class="newsletter-btn">
+                  <i class="fa fa-envelope"></i> Suscribir
+                </button>
+              </form>
+              <ul class="newsletter-follow">
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-pinterest"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /NEWSLETTER -->
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <!-- top footer -->
+      <div class="section">
+        <!-- container -->
+        <div class="container">
+          <!-- row -->
+          <div class="row">
+            <div class="col-md-3 col-xs-6">
+              <div class="footer">
+                <h3 class="footer-title">Sobre nosotros</h3>
+                <p>
+                  Somos una tienda especializada en la venta de equipos
+                  electrónicos de última tecnología.
+                </p>
+                <ul class="footer-links">
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-map-marker"></i>Avenida Santiago 1700</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-phone"></i>+569 2234-58-97</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-envelope-o"></i>electro@service.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-xs-6">
+              <div class="footer">
+                <h3 class="footer-title">Categorías</h3>
+                <ul class="footer-links">
+                  <li><a href="#">Semana de descuento</a></li>
+                  <li><a href="#">Laptops</a></li>
+                  <li><a href="#">Smartphones</a></li>
+                  <li><a href="#">Cámaras</a></li>
+                  <li><a href="#">Audio</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="clearfix visible-xs"></div>
+
+            <div class="col-md-3 col-xs-6">
+              <div class="footer">
+                <h3 class="footer-title">Información</h3>
+                <ul class="footer-links">
+                  <li><a href="#">Nosotros</a></li>
+                  <li><a href="#">Contáctanos</a></li>
+                  <li><a href="#">Política de privacidad</a></li>
+                  <li><a href="#">Órdenes y Devoluciones</a></li>
+                  <li><a href="#">Terminos y condiciones</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-xs-6">
+              <div class="footer">
+                <h3 class="footer-title">Ayuda</h3>
+                <ul class="footer-links">
+                  <li><a href="#">Mi cuenta</a></li>
+                  <li><a href="#">Ver carrito</a></li>
+                  <li><a href="#">Favoritos</a></li>
+                  <li><a href="#">Seguir mi compra</a></li>
+                  <li><a href="#">Soporte</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </div>
+      <!-- /top footer -->
+
+      <!-- bottom footer -->
+      <div id="bottom-footer" class="section">
+        <div class="container">
+          <!-- row -->
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <ul class="footer-payments">
+                <li>
+                  <a href="#"><i class="fa fa-cc-visa"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-credit-card"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-cc-paypal"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-cc-mastercard"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-cc-discover"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-cc-amex"></i></a>
+                </li>
+              </ul>
+              <span class="copyright">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All rights reserved | This template is made with
+                <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </span>
+            </div>
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </div>
+      <!-- /bottom footer -->
+    </footer>
+    <!-- /FOOTER -->
+
+    <!--MODAL-->
+    <div class="modal-bg-1">
+      <div class="modal-1">
+        <h2>Bienvenido a nuestra tienda</h2>
+        <p>Por favor escribe tu nombre</p>
+        <label for="name">Nombre:</label>
+        <input class="input input-name" type="text" name="name" />
+        <button class="primary-btn btn-name">Ingresar a la tienda</button>
+        <span class="modal-close">X</span>
+      </div>
+    </div>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js'></script>
+    <!-- jQuery Plugins -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/jquery.zoom.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Estos son los archivos JS que se implementan para la lógica del proyecto final. Los de arriba venían incoporados al template-->
+    <script src="app/showData.js" type="module"></script>
+    <script src="app/index.js" type="module"></script>
+
+    <script src="app/products.js" type="module"></script>
+
+    <script src="app/showProducts.js" type="module"></script>
+    <script src="app/shoppingcart.js" type="module"></script>
+    <script src="app/updateCart.js" type="module"></script>
+    <script src="app/searchProduct.js" type="module"></script>
+  </body>
+</html>

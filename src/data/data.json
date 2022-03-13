@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "MACBOOK PRO / M1-8 / GPU 8C / 256GB SSD / 13.3''",
+    "price": 1300000,
+    "category": "laptops",
+    "discountCode": "DES_15",
+    "sale": "15%",
+    "img": "img/product01.png",
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "name": "AUDIFONOS DE ESTUDIO AKG K240 MKII",
+    "price": 170000,
+    "category": "audio",
+    "discountCode": "DES_10",
+    "sale": "10%",
+    "img": "img/product02.png",
+    "quantity": 1
+  },
+  {
+    "id": 3,
+    "name": "APPLE PORTATIL MACBOOK PRO 14''",
+    "price": 1800000,
+    "category": "laptops",
+    "discountCode": "N/A",
+    "sale": "0",
+    "img": "img/product03.png",
+    "quantity": 1
+  },
+  {
+    "id": 4,
+    "name": "XPERIA TABLET Z MARCA SONY NEGRA",
+    "price": 150000,
+    "category": "tablets",
+    "discountCode": "DES_10",
+    "sale": "10%",
+    "img": "img/product04.png",
+    "quantity": 1
+  },
+  {
+    "id": 5,
+    "name": "AUDIFONOS SONY BT CH710 GRIS",
+    "price": 74000,
+    "category": "audio",
+    "discountCode": "N/A",
+    "sale": "0",
+    "img": "img/product05.png",
+    "quantity": 1
+  },
+  {
+    "id": 6,
+    "name": "NOTEBOOK GAMER GF63 THIN 10SC",
+    "price": 990000,
+    "category": "laptops",
+    "discountCode": "N/A",
+    "sale": "0",
+    "img": "img/product06.png",
+    "quantity": 1
+  },
+  {
+    "id": 7,
+    "name": "SAMSUNG GALAXY S8 64GB PLUS",
+    "price": 350000,
+    "category": "celulares",
+    "discountCode": "DES_15",
+    "sale": "15%",
+    "img": "img/product07.png",
+    "quantity": 1
+  },
+  {
+    "id": 8,
+    "name": "NOTEBOOK ASUS LAPTOP E410MA-EK1016T",
+    "price": 290000,
+    "category": "laptops",
+    "discountCode": "N/A",
+    "sale": "0",
+    "img": "img/product08.png",
+    "quantity": 1
+  },
+  {
+    "id": 9,
+    "name": "DSC W800 CAMARA DIGITAL COMPACTA",
+    "price": 75000,
+    "category": "camaras",
+    "discountCode": "DES_15",
+    "sale": "15%",
+    "img": "img/product09.png",
+    "quantity": 1
+  }
+]
