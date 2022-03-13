@@ -1,4 +1,5 @@
 'use strict';
+import isEmailValid from './emailValidation.js';
 
 ////////////// Agregando eventos y manipulación del DOM
 ///// Validación del form para la página de checkout
@@ -146,9 +147,4 @@ function setSuccess(element) {
   parent.classList.add('success');
 }
 
-// Función para validar mediante regular expression el valor del input email
-function isEmailValid(email) {
-  const reg =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  return reg.test(email);
-}
+

@@ -17,6 +17,7 @@
     <!-- Bootstrap -->
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 
+    <!-- Sweetalert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Slick -->
@@ -504,7 +505,7 @@
               <p>Suscribir a nuestro <strong>NEWSLETTER</strong></p>
               <form>
                 <input
-                  class="input"
+                  class="input newsletter-email"
                   type="email"
                   placeholder="Ingresa tu E-mail"
                 />
@@ -673,6 +674,7 @@
     <!-- Estos son los archivos JS que se implementan para la lógica del proyecto final. Los de arriba venían incoporados al template-->
     <script src="app/updateCart.js" type="module"></script>
     <script src="app/checkoutCart.js" type="module"></script>
-    <script src="app/checkout_events.js"></script>
+    <script src="app/checkout_events.js" type="module"></script>
+    <script src="app/apiConsultEmailJS.js" type="module"></script>
   </body>
 </html>
