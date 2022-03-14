@@ -62,7 +62,7 @@
 				<a href="#"><i class="fa fa-dollar"></i> CLP</a>
 			  </li>
 			  <li>
-				<a href="session.html"><i class="fa fa-user-o"></i> Mi cuenta</a>
+				<i class="fa fa-user-o"></i><a href="session.html" class="account-user"> Mi cuenta</a>
 			  </li>
 			</ul>
 		  </div>
@@ -125,26 +125,26 @@
 					>
 					  <i class="fa fa-shopping-cart"></i>
 					  <span>Tu Carrito</span>
-					  <div class="qty">0</div>
+					  <div class="qty" id="cart-counter">0</div>
 					</a>
 					<div class="cart-dropdown" id="carrito">
-						<div class="cart-list" id="cart-container">
-						  <div id="lista-carrito">
-							<!--Aquí van los productos en el carrito-->
-						  </div>
-						</div>
-						<div class="cart-summary">
-						  <small id="products-quantity">0 </small
-						  ><span> Producto(s) seleccionados</span>
-						  <h5>TOTAL: CLP <span id="total-price"> 0</span></h5>
-						</div>
-						<div class="cart-btns">
-						  <a href="#" id="vaciar-carrito">Vaciar</a>
-						  <a href="checkout.html"
-							>Pagar <i class="fa fa-arrow-circle-right"></i
-						  ></a>
+					  <div class="cart-list" id="cart-container">
+						<div id="cart-checkout">
+						  <!--Aquí van los productos en el carrito-->
 						</div>
 					  </div>
+					  <div class="cart-summary">
+						<small id="products-quantity">0 </small
+						><span> Producto(s) seleccionados</span>
+						<h5>TOTAL: CLP <span id="total-price"> 0</span></h5>
+					  </div>
+					  <div class="cart-btns">
+						<a href="#" id="vaciar-carrito">Vaciar</a>
+						<a href="#" id="order"
+						  >Pagar <i class="fa fa-arrow-circle-right"></i
+						></a>
+					  </div>
+					</div>
 				  </div>
 				  <!-- /Cart -->
   
@@ -198,16 +198,16 @@
         <div class="row text-center" >
             
                 <main class="form-signin col-md-12" id="flex">
-                    <form class="col-md-6" >
+                    <form class="col-md-6" id="form-user">
                       <img class="mb-4" src="./img/user.png" alt="" width="64" height="64">
                       <h1 class="h3 mb-3 fw-normal">Ingreso de usuario</h1>
                   
                       <div class="form-floating">
-                        <input type="email" class="input" id="floatingInput" placeholder="nombre@correo.com">
+                        <input type="email" class="input input-user" id="floatingInput" placeholder="nombre@correo.com">
                         <label for="floatingInput">Dirección de e-mail</label>
                       </div>
                       <div class="form-floating">
-                        <input type="password" class="input" id="floatingPassword" placeholder="Contraseña">
+                        <input type="password" class="input input-password" id="floatingPassword" placeholder="Contraseña">
                         <label for="floatingPassword">Constraseña</label>
                       </div>
                   
@@ -216,7 +216,7 @@
                           <input type="checkbox" value="remember-me"> Recordarme
                         </label>
                       </div>
-                      <button class="w-100 btn btn-lg primary-btn" type="submit">Ingresar</button>
+                      <button class="w-100 btn btn-lg primary-btn" id="signup-btn" type="submit">Ingresar</button>
                     </form>
                   </main>
             
@@ -408,7 +408,11 @@
     <script src="js/main.js"></script>
 
 	<!-- Estos son los archivos JS que se implementan para la lógica del proyecto final. Los de arriba venían incoporados al template-->
-	<script src="app/apiConsultEmailJS.js" type="module"></script>
+	
     
+	<script src="app/apiConsultEmailJS.js" type="module"></script>
+    <script src="app/userLogIn.js" type="module"></script>
+	<script src="app/userLocalStorage.js" type="module"></script>
+	<script src="app/sessionCart.js" type="module"></script>
   </body>
 </html>
