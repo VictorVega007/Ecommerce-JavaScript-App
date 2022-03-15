@@ -6,7 +6,7 @@ import isEmailValid from './emailValidation.js';
 
 const form = document.getElementById('form');
 const btnSubmit = document.getElementById('btn-submit');
-const firstName = document.querySelector('#first-name');
+const firstName = document.querySelector('.first-name');
 const lastName = document.querySelector('#last-name');
 const emailInput = document.querySelector('#email');
 const textInput = document.querySelectorAll('.value-text');
@@ -147,4 +147,90 @@ function setSuccess(element) {
   parent.classList.add('success');
 }
 
+//////// Parte del botón de compra
 
+const checkoutForm = document.getElementById('order-submit');
+const ccName = document.getElementById('cc-name');
+const ccNumber = document.getElementById('cc-number');
+const ccExpiration = document.getElementById('cc-expiration');
+const ccCode = document.getElementById('cc-cvv');
+const terms = document.getElementById('terms');
+
+checkoutForm.addEventListener('click', function(e) {
+  let hasError = false;
+  let radius = document.querySelector('input[name="payment"]:checked');
+
+  if(!radius) {
+    // eslint-disable-next-line no-undef
+    Swal.fire({
+      icon: 'error',
+      iconColor: '#D10024',
+      color: '#15161D',
+      title: 'Oops!',
+      confirmButtonColor: '#D10024',
+      text: 'Por favor coloque los datos de su tarjeta',
+    });
+    hasError = true;
+  }
+  
+  if (radius) {
+    if (ccName.value.trim() == '' || ccExpiration.value.trim() == '') { 
+      setError(ccName, 'Coloque un nombre');
+      setError(ccExpiration, 'Coloque la fecha de vencimiento');
+      hasError = true;
+    } else if (ccName.value.trim() != '') {
+      setSuccess(ccName);
+      setSuccess(ccExpiration);    } 
+  }
+    
+  if (radius) {
+    if (ccNumber.value.trim() != parseInt(ccNumber.value.trim()) ||
+    ccCode.value.trim() != parseInt(ccCode.value.trim())) {
+      setError(ccNumber, 'Coloque un número');
+      setError(ccCode, 'Coloque el código de seguridad');
+      hasError = true;
+    } else {
+      setSuccess(ccNumber);
+      setSuccess(ccCode);
+    }
+  }
+  
+  if (!terms.checked){
+    // eslint-disable-next-line no-undef
+    Swal.fire({
+      icon: 'error',
+      iconColor: '#D10024',
+      color: '#15161D',
+      title: 'Oops!',
+      confirmButtonColor: '#D10024',
+      text: 'Por favor acepte la casilla de condiciones',
+    });
+    hasError = true;
+  }
+  
+  if (!hasError) {
+    
+    
+    // eslint-disable-next-line no-undef
+    Swal.fire({
+      icon: 'success',
+      color: '#15161D',
+      timer: 5000,
+      showConfirmButton: true,
+      title: 'Tu compra se realizo con éxito!',
+      confirmButtonColor: '#D10024',
+      text: 'Sus productos ya están en camino',
+      
+    });
+
+    localStorage.clear();
+    
+    
+  }
+ 
+  if(hasError) e.preventDefault();
+ 
+  
+  checkoutForm.reset();
+  
+});

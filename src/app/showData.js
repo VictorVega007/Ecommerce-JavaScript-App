@@ -16,8 +16,6 @@ const showData = fetch('./data/data.json')
       <div class="product-img">
         <img src="${product.img}" alt="" />
         <div class="product-label">
-          <span class="sale" id="codigoDescuento">${product.discountCode}</span>
-          <span class="sale">-${product.sale}</span>
         </div>
       </div>
       <div class="product-body">
@@ -25,7 +23,7 @@ const showData = fetch('./data/data.json')
         <h3 class="product-name">
          ${product.name}
         </h3>
-        <h4 class="product-price">CLP ${product.price} - ${product.sale}</h4>
+        <h4 class="product-price">CLP ${product.price}</h4>
         <div class="product-rating">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
